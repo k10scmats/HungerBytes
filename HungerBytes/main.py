@@ -3,6 +3,48 @@ from kivy.uix.button import Button
 from kivy.uix.boxlayout import BoxLayout
 from kivy.app import App
 from functools import partial
+from kivy.uix.screenmanager import ScreenManager, Screen
+from kivy.properties import NumericProperty
+from kivy.lang import Builder
+
+
+Builder.load_string('''
+#:import random random.random
+#:import SlideTransition kivy.uix.screenmanager.SlideTransition
+
+<CustomScreen>:
+    Button:
+        text: 'B1'
+        size_hint: None, None
+        pos_hint: {'right': 1}
+        size: 150, 50
+        on_press:   root.manager.transition = \
+                    SlideTransition(direction="left")
+        on_release: root.manager.current = root.manager.next()
+
+    Button:
+        text: 'B2'
+        size_hint: None, None
+        size: 150, 50
+        on_press:   root.manager.transition = \
+                    SlideTransition(direction="right")
+        on_release: root.manager.current = root.manager.previous()
+
+    BoxLayout:
+        size_hint: .5, None
+        height: 250
+        pos_hint: {'center_x': .5}
+        orientation: 'vertical'
+
+        Button:
+            text: 'B3'
+            on_release: root.manager.transition = \
+                        SlideTransition(direction="left")
+''')
+
+
+class CustomScreen(Screen):
+    pass
 
 
 class HBApp(App):
@@ -11,28 +53,9 @@ class HBApp(App):
         pass
 
     def build(self):
-        button1 = Button(text="B1",
-                         on_press=partial(self.next_screen))
-        button2 = Button(text="B2")
-        button3 = Button(text="B3")
-        button4 = Button(text="B4")
-        button5 = Button(text="B5")
-        button6 = Button(text="B6")
-
-        layout = BoxLayout(size_hint=(1, None), height=50)
-        layout.add_widget(button1)
-        layout.add_widget(button2)
-        layout.add_widget(button3)
-        layout.add_widget(button4)
-        layout.add_widget(button5)
-        layout.add_widget(button6)
-
-        root = BoxLayout(orientation='vertical')
-        root.add_widget(layout)
-
-        filename = 'Main_Background.jpg'
-        l1 = Image(source=filename, size=root.size)
-        root.add_widget(l1)
+        root = ScreenManager()
+        for x in range(4):
+            root.add_widget(CustomScreen(name='Screen %d' % x))
         return root
 
 
