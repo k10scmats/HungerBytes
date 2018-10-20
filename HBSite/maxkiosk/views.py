@@ -66,7 +66,7 @@ def page_4a(request):
         "text" : "Options...",
         "links" : {
             "Button1" : {"text" : "Print",
-                "link" : "#"},
+                "link" : "receipt_url"},
             "Button2" : {"text" : "",
                 "link" : "#"},
             "Button3" : {"text" : "",
@@ -86,7 +86,7 @@ def page_4b(request):
         "text" : "Options...",
         "links" : {
             "Button1" : {"text" : "Print",
-                "link" : "#"},
+                "link" : "receipt_url"},
             "Button2" : {"text" : "",
                 "link" : "#"},
             "Button3" : {"text" : "",
