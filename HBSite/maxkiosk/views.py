@@ -49,7 +49,9 @@ def page_2(request):
             {"heading" : "ALERTS",
             "body" : "Earth Quake Warning"},
             {"heading" : "",
-            "body" : ["Be prepared to take cover to take cover.", "Available Resources near you can be found on the receipt."]}
+            "body" : "Be prepared to take cover to take cover."} 
+            {"heading" : "",
+            "body" : "Available Resources near you can be found on the receipt."]}
             ],
         "text" : "Alerts",
         "body" : "Welcome!",
