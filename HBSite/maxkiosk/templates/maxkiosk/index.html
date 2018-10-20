@@ -4,12 +4,12 @@
 <body>
 
 <map name="maxmap">
-    <area shape="rect" coords="227,919,320,1054" href="Page1">
-	<area shape="rect" coords="385,919,477,1054" href="Page2">
-	<area shape="rect" coords="543,919,635,1054" href="Page3">
-	<area shape="rect" coords="700,919,791,1054" href="Page4">
-	<area shape="rect" coords="856,919,946,1054" href="Page5">
-	<area shape="rect" coords="1012,919,1105,1054" href="Page6">
+    <area shape="rect" coords="227,919,320,1054" href="{{links.Button1.link}}">
+	<area shape="rect" coords="385,919,477,1054" href="{{links.Button1.link}}">
+	<area shape="rect" coords="543,919,635,1054" href="{{links.Button1.link}}">
+	<area shape="rect" coords="700,919,791,1054" href="{{links.Button1.link}}">
+	<area shape="rect" coords="856,919,946,1054" href="{{links.Button1.link}}">
+	<area shape="rect" coords="1012,919,1105,1054" href="{{links.Button6.link}}">
 	
     {% for link, button_shape in button_list %}
     <area shape="rect" coords="{{ button_shape }}" href="#">
@@ -54,22 +54,22 @@ window.onload = function() {
         ctx.fill()
     }
     ctx.fillStyle = "#FFFFFF";
-    ctx.fillText("{{Button1.text}}", 250, 650)
+    ctx.fillText("{{links.Button1.text}}", 250, 650)
 
     ctx.fillStyle = "#FFFFFF";
-    ctx.fillText("{{Button2.text}}", 400, 650)
+    ctx.fillText("{{links.Button2.text}}", 400, 650)
 
     ctx.fillStyle = "#FFFFFF";
-    ctx.fillText("{{Button3.text}}", 550, 650)
+    ctx.fillText("{{links.Button3.text}}", 550, 650)
 
     ctx.fillStyle = "#FFFFFF";
-    ctx.fillText("{{Button4.text}}", 700, 650)
+    ctx.fillText("{{links.Button4.text}}", 700, 650)
 
     ctx.fillStyle = "#FFFFFF";
-    ctx.fillText("{{Button5.text}}", 850, 650)
+    ctx.fillText("{{links.Button5.text}}", 850, 650)
 
     ctx.fillStyle = "#FFFFFF";
-    ctx.fillText("{{Button6.text}}", 1000, 650)
+    ctx.fillText("{{links.Button6.text}}", 1000, 650)
 };
 </script>
 
