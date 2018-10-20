@@ -32,7 +32,7 @@ window.onload = function() {
     ctx.fillRect(225,186,867,643);
     ctx.fillStyle = "#000000";
     ctx.font = "30px Ariel";
-    ctx.fillText("Hello, {{ name }}", 300, 250);
+    ctx.fillText("{{ text }} ", 300, 250);
     <!--ctx.fillText("Test", 300, 610)-->
 
 
@@ -42,7 +42,9 @@ window.onload = function() {
     var total_width = 840;
     var pair_corner =  total_width / 5.69
     var button_width = total_width / 6.37
+    
     for (var i=0; i < 6; i++) {
+        
         ctx.fillStyle = (i % 2 == 0 ) ? "#122C3D" : "#B9B987";
         ctx.fillRect(start_x + (i * pair_corner), y, button_width, button_height);
         ctx.fillStyle = (i % 2 == 1 ) ? "#122C3D" : "#B9B987";
