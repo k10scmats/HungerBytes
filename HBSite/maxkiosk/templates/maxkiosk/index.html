@@ -33,13 +33,13 @@ window.onload = function() {
     ctx.fillStyle = "#000000";
 
     {% for hb in content %}
-    ctx.font = "30px Ariel bold";
+    ctx.font = "bold 30px Arial";
     ctx.textAlign="center";
     ctx.fillText("{{ hb.heading }} ", 658, 250 + {{forloop.counter0}}* 100);
 
-    ctx.font = "30px Ariel";
+    ctx.font = "30px Arial";
     ctx.textAlign="center";
-    ctx.fillText("{{ hb.body }} ", 658, 275 + {{forloop.counter0}} * 100);
+    ctx.fillText("{{ hb.body }} ", 658, 280 + {{forloop.counter0}} * 100);
     {% endfor %}
 
     var start_x = 235;
@@ -61,6 +61,7 @@ window.onload = function() {
         ctx.closePath()
         ctx.fill()
     }
+    ctx.font = "30px Arial";
     ctx.textAlign="left";
     ctx.fillStyle = "#FFFFFF";
     ctx.fillText("{{links.Button1.text}}", 250, 650)
