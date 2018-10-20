@@ -45,7 +45,7 @@ def page_2(request):
         "text" : "Menu",
         "links" : {
             "Button1" : {"text" : "Print", 
-                "link" : "reciept_url"},
+                "link" : reciept_url},
             "Button2" : {"text" : "", 
                 "link" : "#"},
             "Button3" : {"text" : "", 
@@ -70,7 +70,7 @@ def page_3(request):
             "Button2" : {"text" : "Basic", 
                 "link" : "page_4b"},
             "Button3" : {"text" : "Print", 
-                "link" : "reciept_url"},
+                "link" : reciept_url},
             "Button4" : {"text" : "Food", 
                 "link" : "page_4c"},
             "Button5" : {"text" : "Health", 
@@ -87,7 +87,7 @@ def page_4a(request):
         "text" : "Options...",
         "links" : {
             "Button1" : {"text" : "Print",
-                "link" : "receipt_url"},
+                "link" : receipt_url},
             "Button2" : {"text" : "",
                 "link" : "#"},
             "Button3" : {"text" : "",
@@ -108,7 +108,7 @@ def page_4b(request):
         "text" : "Options...",
         "links" : {
             "Button1" : {"text" : "Print",
-                "link" : "receipt_url"},
+                "link" : receipt_url},
             "Button2" : {"text" : "",
                 "link" : "#"},
             "Button3" : {"text" : "",
