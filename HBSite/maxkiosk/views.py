@@ -22,8 +22,10 @@ def index(request):
 
 def page_1(request):
     context = {
-        "text" : "Menu",
-        "body" : "Welcome!",
+        "content" : [
+            {"heading" : "Menu",
+            "body" : "Welcome!"},
+            ],
         "links" : {
             "Button1" : {"text" : "", 
                 "link" : "page_2"},
@@ -43,6 +45,12 @@ def page_1(request):
 
 def page_2(request):
     context = {
+        "content" : [
+            {"heading" : "ALERTS",
+            "body" : "Earth Quake Warning"},
+            {"heading" : "",
+            "body" : "Be prepared to take cover to take cover. Available Resources near you can be found on the receipt."}
+            ],
         "text" : "Alerts",
         "body" : "Welcome!",
         "links" : {
@@ -176,8 +184,10 @@ def page_4d(request):
 
 def page_4e(request):
     context_4e = {
-        "text": "Transit",
-        "body" : "Welcome!",
+        "content" : [
+            {"heading" : "Transit",
+            "body" : "Welcome!"},
+            ],
         "links": {
             "Button1": {"text": "Print",
                         "link": reciept_url},
