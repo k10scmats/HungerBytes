@@ -43,7 +43,7 @@ def page_1(request):
 
 def page_2(request):
     context = {
-        "text" : "Menu",
+        "text" : "Alerts",
         "body" : "Welcome!",
         "links" : {
             "Button1" : {"text" : "Print", 
@@ -134,7 +134,7 @@ def page_4c(request):
         "body" : "Welcome!",
         "links" : {
             "Button1" : {"text" : "Print",
-                "link" : "#"},
+                "link" : reciept_url},
             "Button2" : {"text" : "",
                 "link" : "#"},
             "Button3" : {"text" : "",
@@ -155,7 +155,7 @@ def page_4d(request):
         "body" : "Welcome!",
         "links": {
             "Button1": {"text": "Print",
-                        "link": "#"},
+                        "link": reciept_url},
             "Button2": {"text": "",
                         "link": "#"},
             "Button3": {"text": "",
@@ -165,7 +165,7 @@ def page_4d(request):
             "Button5": {"text": "",
                         "link": "#"},
             "Button6": {"text": "Back",
-                        "link": "page_4d"}
+                        "link": "page_3"}
         }
     }
     return render(request, 'maxkiosk/index.html', context=context_4d)
