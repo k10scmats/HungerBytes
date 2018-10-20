@@ -22,10 +22,18 @@ def page_1(request):
     context = {
         "text" : "Menu",
         "links" : {
-            "Button1" : {"text" : "Health and services", 
-                "link" : "page_4a"},
-            "Button2" : {"text" : "Health and services", 
-                "link" : "page_4a"}
+            "Button1" : {"text" : "", 
+                "link" : "page_2"},
+            "Button2" : {"text" : "", 
+                "link" : "page_2"},
+            "Button3" : {"text" : "", 
+                "link" : "page_2"},
+            "Button4" : {"text" : "", 
+                "link" : "page_2"},
+            "Button5" : {"text" : "", 
+                "link" : "page_2"} ,   
+            "Button6" : {"text" : "", 
+                "link" : "page_2"},
         }
     }
     return render(request, 'maxkiosk/index.html', context=context)
