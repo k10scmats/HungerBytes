@@ -175,8 +175,12 @@ def page_4c(request):
 
 def page_4d(request):
     context_4d = {
-        "text": "Options",
-        "body" : "Welcome!",
+        "content" : [
+            {"heading" : "Option 1 - ###-###-#### - 2 miles",
+            "body" : "Hours and general information"},
+            {"heading" : "Option 2 - ###-###-#### - 2.5 miles",
+            "body" : "Hours and general information"},
+            ],
         "links": {
             "Button1": {"text": "Print",
                         "link": reciept_url},
@@ -197,8 +201,10 @@ def page_4d(request):
 def page_4e(request):
     context_4e = {
         "content" : [
-            {"heading" : "Transit",
-            "body" : "Welcome!"},
+            {"heading" : "Option 1 - ###-###-#### - 2 miles",
+            "body" : "Hours and general information"},
+            {"heading" : "Option 2 - ###-###-#### - 2.5 miles",
+            "body" : "Hours and general information"},
             ],
         "links": {
             "Button1": {"text": "Print",
