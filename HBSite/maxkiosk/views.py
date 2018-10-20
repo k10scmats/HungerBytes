@@ -176,10 +176,10 @@ def page_4c(request):
 def page_4d(request):
     context_4d = {
         "content" : [
-            {"heading" : "Option 1 - ###-###-#### - 2 miles",
-            "body" : "Hours and general information"},
-            {"heading" : "Option 2 - ###-###-#### - 2.5 miles",
-            "body" : "Hours and general information"},
+            {"heading" : "Hospital: Legacy Heath – 2 miles",
+            "body" : "2801 N Vancouver Ave"},
+            {"heading" : "Health Screenings/Tests: Outside In – 4 miles",
+            "body" : "1132 SW 13th Ave"},
             ],
         "links": {
             "Button1": {"text": "Print",
@@ -201,10 +201,10 @@ def page_4d(request):
 def page_4e(request):
     context_4e = {
         "content" : [
-            {"heading" : "Option 1 - ###-###-#### - 2 miles",
-            "body" : "Hours and general information"},
-            {"heading" : "Option 2 - ###-###-#### - 2.5 miles",
-            "body" : "Hours and general information"},
+            {"heading" : "Disability: Ride Connection – 0.8 mile",
+            "body" : "9955 NE 65th Ave"},
+            {"heading" : "Runaway Youth Transport: National Runaway Safeline - 2 miles",
+            "body" : "31418 N Lincoln Ave"},
             ],
         "links": {
             "Button1": {"text": "Print",
