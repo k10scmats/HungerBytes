@@ -65,7 +65,7 @@ def page_3(request):
     context = {
         "text" : "Menu",
         "links" : {
-            "Button1" : {"text" : "Health and Safety", 
+            "Button1" : {"text" : "H and S",
                 "link" : "page_4a"},
             "Button2" : {"text" : "Basic", 
                 "link" : "page_4b"},
