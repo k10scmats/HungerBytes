@@ -51,7 +51,7 @@ def page_2(request):
             {"heading" : "",
             "body" : "Be prepared to take cover to take cover."} ,
             {"heading" : "",
-            "body" : "Available Resources near you can be found on the receipt."]}
+            "body" : "Available Resources near you can be found on the receipt."]},
             ],
         "text" : "Alerts",
         "body" : "Welcome!",
