@@ -31,22 +31,31 @@ def page_1(request):
     return render(request, 'maxkiosk/index.html', context=context)
 
 def page_2(request):
-    return render(request, 'maxkiosk/page_2.html')
+    return render(request, 'maxkiosk/index.html')
 
 def page_3(request):
-    return render(request, 'maxkiosk/page_3.html')
+    return render(request, 'maxkiosk/index.html')
 
 def page_4a(request):
-    return render(request, 'maxkiosk/page_4a.html')
+    return render(request, 'maxkiosk/index.html')
 
 def page_4b(request):
-    return render(request, 'maxkiosk/page_4b.html')
+    return render(request, 'maxkiosk/index.html')
 
 def page_4c(request):
-    return render(request, 'maxkiosk/page_4c.html')
+    context_4c = {
+        "text": " ",
+        "links": {
+            "Button1": {"text": "Print",
+                        "link": "page_4a"},
+            "Button2": {"text": "Back",
+                        "link": "page_4a"}
+        }
+    }
+    return render(request, 'maxkiosk/index.html', context = context_4c)
 
 def page_4d(request):
-    return render(request, 'maxkiosk/page_4d.html')
+    return render(request, 'maxkiosk/index.html')
 
 def page_4e(request):
     return render(request, 'maxkiosk/page_4e.html')
