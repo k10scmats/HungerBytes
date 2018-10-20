@@ -1,7 +1,9 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from .models import User
+from django.contrib.staticfiles.templatetags.staticfiles import static
 
+url = static('reciept.jpg')
 # Create your views here.
 
 def get_button_list(box=(860, 420, 1130, 640), n_buttons = 6, bgr=0.8, height=60, link_list=["page.html"]):
@@ -22,10 +24,18 @@ def page_1(request):
     context = {
         "text" : "Menu",
         "links" : {
-            "Button1" : {"text" : "Health and services",
-                "link" : "page_4a"},
-            "Button2" : {"text" : "Health and services",
-                "link" : "page_4a"}
+            "Button1" : {"text" : "", 
+                "link" : "page_2"},
+            "Button2" : {"text" : "", 
+                "link" : "page_2"},
+            "Button3" : {"text" : "", 
+                "link" : "page_2"},
+            "Button4" : {"text" : "", 
+                "link" : "page_2"},
+            "Button5" : {"text" : "", 
+                "link" : "page_2"} ,   
+            "Button6" : {"text" : "", 
+                "link" : "page_2"},
         }
     }
     return render(request, 'maxkiosk/index.html', context=context)
