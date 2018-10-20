@@ -161,8 +161,21 @@ def page_4d(request):
     return render(request, 'maxkiosk/index.html', context=context_4d)
 
 def page_4e(request):
+    context_4d = {
+        "text": "Transit",
+        "links": {
+            "Button1": {"text": "Print",
+                        "link": reciept_url},
+            "Button2": {"text": "",
+                        "link": "#"},
+            "Button3": {"text": "",
+                        "link": "#"},
+            "Button4": {"text": "",
+                        "link": "#"},
+            "Button5": {"text": "",
+                        "link": "#"},
+            "Button6": {"text": "Back",
+                        "link": "page_3"}
+        }
+    }
     return render(request, 'maxkiosk/page_4e.html')
-
-def page_5(request):
-    return render(request, 'maxkiosk/page_5.html')
-
