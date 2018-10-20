@@ -11,8 +11,8 @@ class HBApp(App):
         pass
 
     def build(self):
-        button1 = Button(text="B1")
-                         #,on_press=partial(self.next_screen(self)))
+        button1 = Button(text="B1",
+                         on_press=partial(self.next_screen))
         button2 = Button(text="B2")
         button3 = Button(text="B3")
         button4 = Button(text="B4")
