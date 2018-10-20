@@ -12,5 +12,4 @@ urlpatterns = [
     path('page_4c', views.page_4c, name='page_4c'),
     path('page_4d', views.page_4d, name='page_4d'),
     path('page_4e', views.page_4e, name='page_4e'),
-    path('page_5', views.page_5, name='page_5'),
 ]
