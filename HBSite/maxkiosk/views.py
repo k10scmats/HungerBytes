@@ -58,7 +58,7 @@ def page_2(request):
                 "link" : "page_3"},
         }
     }
-    return render(request, 'maxkiosk/index.html')
+    return render(request, 'maxkiosk/index.html', context=context)
 
 def page_3(request):
     context = {
@@ -78,7 +78,7 @@ def page_3(request):
                 "link" : "page_4e"},
         }
     }
-    return render(request, 'maxkiosk/index.html')
+    return render(request, 'maxkiosk/index.html', context=context)
 
 def page_4a(request):
     context = {
