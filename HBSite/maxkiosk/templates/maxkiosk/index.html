@@ -32,13 +32,15 @@ window.onload = function() {
     ctx.fillRect(225,186,867,643);
     ctx.fillStyle = "#000000";
 
+    {% for i, hb in enumerate(content) %}
     ctx.font = "30px Ariel";
     ctx.textAlign="center";
-    ctx.fillText("{{ text }} ", 300, 250);
+    ctx.fillText("{{ hb.heading }} ", 300, 250 + i * 20);
 
     ctx.font = "30px Ariel";
     ctx.textAlign="center";
-    ctx.fillText("{{ body }} ", 300, 400);
+    ctx.fillText("{{ hb.body }} ", 300, 400 + i * 20);
+    {% endfor %}
 
     var start_x = 235;
     var y = 601;
