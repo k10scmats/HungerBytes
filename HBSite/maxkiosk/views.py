@@ -55,11 +55,11 @@ def page_2(request):
             "Button5" : {"text" : "", 
                 "link" : "page_2"} ,   
             "Button6" : {"text" : "", 
-                "link" : "page_2"},
-    return render(request, 'maxkiosk/index.html')
+                "link" : "page_2"},}}
+    return render(request, 'maxkiosk/index.html', context=context)
 
 def page_3(request):
-    return render(request, 'maxkiosk/index.html')
+    return render(request, 'maxkiosk/index.html', context=context)
 
 def page_4a(request):
     context = {
@@ -79,7 +79,7 @@ def page_4a(request):
                 "link" : "page_3"}
         }
     }
-    return render(request, 'maxkiosk/page_4a.html')
+    return render(request, 'maxkiosk/page_4a.html', context=context)
 
 def page_4b(request):
     context = {
@@ -99,7 +99,7 @@ def page_4b(request):
                 "link" : "page_3"}
         }
     }
-    return render(request, 'maxkiosk/page_4b.html')
+    return render(request, 'maxkiosk/page_4b.html', context=context)
 
 def page_4c(request):
     context_4c = {
