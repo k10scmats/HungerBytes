@@ -1,1 +1,2 @@
-*.pyc
+HBSite/HBSite/__pycache__
+*.py[cod]
