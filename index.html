@@ -17,18 +17,17 @@ window.onload = function() {
     var canvas = document.getElementById("myCanvas");
     var ctx = canvas.getContext("2d");
     ctx.fillStyle = "#FFFFFF";
-    ctx.fillRect(225,110,867,643);
+    ctx.fillRect(225,186,867,643);
     ctx.fillStyle = "#000000";
     ctx.font = "30px Ariel";
-    ctx.fillText("Hello, World!", 300, 200);
+    ctx.fillText("Hello, World!", 300, 250);
 
     var start_x = 235;
     var y = 601;
     var button_height = 155;
-    var total_width = 860;
+    var total_width = 840;
     var pair_corner =  total_width / 5.69
     var button_width = total_width / 6.37
-    var gap_width = total_width / 57.33
     for (var i=0; i < 6; i++) {
         ctx.fillStyle = (i % 2 == 0 ) ? "#122C3D" : "#B9B987";
         ctx.fillRect(start_x + (i * pair_corner), y, button_width, button_height);
