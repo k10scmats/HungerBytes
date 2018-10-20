@@ -2,26 +2,15 @@
 <!DOCTYPE html>
 <html>
 <body>
-
 <map name="maxmap">
-    <area shape="rect" coords="227,919,320,1054" href="{{links.Button1.link}}">
-	<area shape="rect" coords="385,919,477,1054" href="{{links.Button2.link}}">
-	<area shape="rect" coords="543,919,635,1054" href="{{links.Button3.link}}">
-	<area shape="rect" coords="700,919,791,1054" href="{{links.Button4.link}}">
-	<area shape="rect" coords="856,919,946,1054" href="{{links.Button5.link}}">
-	<area shape="rect" coords="1012,919,1105,1054" href="{{links.Button6.link}}">
-	
-    {% for link, button_shape in button_list %}
-    <area shape="rect" coords="{{ button_shape }}" href="#">
-    {% endfor %}
+    <area shape="rect" coords="737,723,1301,1302" href="{{links.Button1.link}}">
+
 
 </map>
 
 <img id="scream" src="{% static 'maxkiosk/home_screen.jpg' %}" usemap="#maxmap" style="position:absolute; z-index: -1">
 
-<canvas id="myCanvas" width="1116" height="751" style="position: absolute;" usemap="#maxmap">
-Your browser does not support the HTML5 canvas tag.
-</canvas>
+
 
 
 
