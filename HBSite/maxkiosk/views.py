@@ -121,7 +121,7 @@ def page_4d(request):
             "Button5": {"text": "",
                         "link": "#"},
             "Button6": {"text": "Back",
-                        "link": "page_3"}
+                        "link": "page_4d"}
         }
     }
     return render(request, 'maxkiosk/index.html', context=context_4d)
