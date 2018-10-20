@@ -149,7 +149,7 @@ def page_4c(request):
         "content" : [
             {"heading" : "Soup Kitchen: Operation Nightwatch - 0.5 mile",
             "body" : "1432 SW 13th Ave"},
-            {"heading" : "Sack Lunches & Dinners: Union Gospel Mission",
+            {"heading" : "Sack Lunches/Dinners: Union Gospel Mission",
             "body" : "1432 SW 13th Ave"},
             ],
         "links" : {
