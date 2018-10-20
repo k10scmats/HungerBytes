@@ -3,15 +3,13 @@
 <html>
 <body>
 
-<p>Image to use:</p>
-
 <map name="maxmap">
     <area shape="rect" coords="219, 912, 322, 1056" href="main.html">
 </map>
 
 <img id="scream" src="HungerBytes/Main_Background.jpg" usemap="#maxmap" style="position:absolute; z-index: -1">
 
-<canvas id="myCanvas" width="875" height="743" style="border:1px solid #d3d3d3;position: absolute;" usemap="#maxmap">
+<canvas id="myCanvas" width="1116" height="751" style="position: absolute;" usemap="#maxmap">
 Your browser does not support the HTML5 canvas tag.
 </canvas>
 
@@ -21,7 +19,10 @@ window.onload = function() {
     var ctx = canvas.getContext("2d");
     var img = document.getElementById("scream");
     ctx.fillStyle = "#FFFFFF"
-    ctx.fillRect(0,0,100,100)
+    ctx.fillRect(225,110,867,643)
+    ctx.fillStyle = "#000000"
+    ctx.font = "30px Ariel"
+    ctx.fillText("Hello, World!", 300, 200)
 };
 </script>
 
