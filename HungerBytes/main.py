@@ -5,18 +5,14 @@ from kivy.lang import Builder
 
 Builder.load_string('''
 #:import random random.random
-#:import SlideTransition kivy.uix.screenmanager.SlideTransition
+#:import NoTransition kivy.uix.screenmanager.NoTransition
 
-<CustomScreen>:
-    Image:
-        source:'Main_Background.jpg'
-        
+<DemoScreen>:
     Button:
         text: 'Back'
         size_hint: None, None
         size: 150, 50
-        on_press:   root.manager.transition = \
-                    SlideTransition(direction="right")
+        on_press:   root.manager.transition = NoTransition()
         on_release: root.manager.current = root.manager.previous()
         
     Button:
@@ -24,13 +20,34 @@ Builder.load_string('''
         size_hint: None, None
         pos_hint: {'right': 1}
         size: 150, 50
-        on_press:   root.manager.transition = \
-                    SlideTransition(direction="left")
+        on_press:   root.manager.transition = NoTransition()
         on_release: root.manager.current = root.manager.next()
+
+    Button:
+        text: 'test'
+        size_hint: None, None
+        size: 150, 50
+        pos: root.children[0].size[0] ,root.size[1] / 10
+
+<HomeScreen>:
+    Image:
+        source:'Main_Background.jpg'
+
+<IntroScreen>:
+    Image:
+        source:'Intro.jpg'
+
 ''')
 
+class DemoScreen(Screen):
+    pass
 
-class CustomScreen(Screen):
+
+class HomeScreen(DemoScreen):
+    pass
+
+
+class IntroScreen(DemoScreen):
     pass
 
 
@@ -41,8 +58,8 @@ class HBApp(App):
 
     def build(self):
         root = ScreenManager()
-        for x in range(4):
-            root.add_widget(CustomScreen(name='Screen %d' % x))
+        root.add_widget(HomeScreen(name='what'))
+        root.add_widget(IntroScreen(name='whatt'))
         return root
 
 
