@@ -32,14 +32,14 @@ window.onload = function() {
     ctx.fillRect(225,186,867,643);
     ctx.fillStyle = "#000000";
 
-    {% for i, hb in enumerate(content) %}
-    ctx.font = "30px Ariel";
+    {% for hb in content %}
+    ctx.font = "30px Ariel bold";
     ctx.textAlign="center";
-    ctx.fillText("{{ hb.heading }} ", 300, 250 + i * 20);
+    ctx.fillText("{{ hb.heading }} ", 658, 250 + {{forloop.counter0}}* 100);
 
     ctx.font = "30px Ariel";
     ctx.textAlign="center";
-    ctx.fillText("{{ hb.body }} ", 300, 400 + i * 20);
+    ctx.fillText("{{ hb.body }} ", 658, 275 + {{forloop.counter0}} * 100);
     {% endfor %}
 
     var start_x = 235;
