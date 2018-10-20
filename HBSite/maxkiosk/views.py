@@ -87,8 +87,8 @@ def page_3(request):
 
 def page_4a(request):
     context = {
-        "text" : "Housing And Shelter",
-        "body" : "St. Francis Dining Hall 8AM - 5PM - 2 miles",
+        "text" : "Options...",
+        "body" : "Welcome!",
         "links" : {
             "Button1" : {"text" : "Print",
                 "link" : reciept_url},
@@ -109,8 +109,12 @@ def page_4a(request):
 
 def page_4b(request):
     context = {
-        "text" : "Basic Needs",
-        "body" : "Showers: Portland Rescue Mission - 1 mile",
+        "content" : [
+            {"heading" : "Options...",
+            "body" : "Welcome!"},
+            {"heading" : "Options...",
+            "body" : "Welcome!"},
+            ],
         "links" : {
             "Button1" : {"text" : "Print",
                 "link" : reciept_url},
