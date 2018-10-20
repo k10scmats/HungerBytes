@@ -3,7 +3,7 @@ from django.http import HttpResponse
 from .models import User
 from django.contrib.staticfiles.templatetags.staticfiles import static
 
-reciept_url = static('image.png')
+reciept_url = static('maxkiosk/image.png')
 # Create your views here.
 
 def get_button_list(box=(860, 420, 1130, 640), n_buttons = 6, bgr=0.8, height=60, link_list=["page.html"]):
@@ -52,13 +52,14 @@ def page_2(request):
                 "link" : "#"},
             "Button4" : {"text" : "", 
                 "link" : "#"},
-            "Button5" : {"text" : "", 
+            "Button5" : {"text" : "",
                 "link" : "#"} ,   
             "Button6" : {"text" : "Next", 
                 "link" : "page_3"},
         }
     }
     return render(request, 'maxkiosk/index.html', context=context)
+
 
 def page_3(request):
     context = {
@@ -80,12 +81,13 @@ def page_3(request):
     }
     return render(request, 'maxkiosk/index.html', context=context)
 
+
 def page_4a(request):
     context = {
         "text" : "Options...",
         "links" : {
             "Button1" : {"text" : "Print",
-                "link" : "receipt_url"},
+                "link" : reciept_url},
             "Button2" : {"text" : "",
                 "link" : "#"},
             "Button3" : {"text" : "",
@@ -98,14 +100,15 @@ def page_4a(request):
                 "link" : "page_3"}
         }
     }
-    return render(request, 'maxkiosk/page_4a.html', context=context)
+    return render(request, 'maxkiosk/index.html', context=context)
+
 
 def page_4b(request):
     context = {
         "text" : "Options...",
         "links" : {
             "Button1" : {"text" : "Print",
-                "link" : "receipt_url"},
+                "link" : reciept_url},
             "Button2" : {"text" : "",
                 "link" : "#"},
             "Button3" : {"text" : "",
@@ -118,7 +121,7 @@ def page_4b(request):
                 "link" : "page_3"}
         }
     }
-    return render(request, 'maxkiosk/page_4b.html', context=context)
+    return render(request, 'maxkiosk/index.html', context=context)
 
 def page_4c(request):
     context_4c = {
