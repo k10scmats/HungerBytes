@@ -49,7 +49,7 @@ def page_2(request):
             {"heading" : "ALERTS",
             "body" : "Earth Quake Warning"},
             {"heading" : "",
-            "body" : "Be prepared to take cover to take cover. Available Resources near you can be found on the receipt."}
+            "body" : ["Be prepared to take cover to take cover.", "Available Resources near you can be found on the receipt."]}
             ],
         "text" : "Alerts",
         "body" : "Welcome!",
@@ -73,8 +73,12 @@ def page_2(request):
 
 def page_3(request):
     context = {
-        "text" : "Menu",
-        "body" : "Welcome!",
+        "content" : [
+            {"heading" : "Menu",
+            "body" : "Welcome!"},
+            {"heading" : "Options...",
+            "body" : "Welcome!"},
+            ],
         "links" : {
             "Button1" : {"text" : "H and S",
                 "link" : "page_4a"},
@@ -149,7 +153,7 @@ def page_4c(request):
         "content" : [
             {"heading" : "Soup Kitchen: Operation Nightwatch - 0.5 mile",
             "body" : "1432 SW 13th Ave"},
-            {"heading" : "Sack Lunches & Dinners: Union Gospel Mission",
+            {"heading" : "Sack Lunches/Dinners: Union Gospel Mission",
             "body" : "1432 SW 13th Ave"},
             ],
         "links" : {
@@ -171,8 +175,12 @@ def page_4c(request):
 
 def page_4d(request):
     context_4d = {
-        "text": "Options",
-        "body" : "Welcome!",
+        "content" : [
+            {"heading" : "Hospital: Legacy Heath – 2 miles",
+            "body" : "2801 N Vancouver Ave"},
+            {"heading" : "Health Screenings/Tests: Outside In – 4 miles",
+            "body" : "1132 SW 13th Ave"},
+            ],
         "links": {
             "Button1": {"text": "Print",
                         "link": reciept_url},
@@ -193,8 +201,10 @@ def page_4d(request):
 def page_4e(request):
     context_4e = {
         "content" : [
-            {"heading" : "Transit",
-            "body" : "Welcome!"},
+            {"heading" : "Disability: Ride Connection – 0.8 mile",
+            "body" : "9955 NE 65th Ave"},
+            {"heading" : "Youth Transport: National Runaway Safeline - 2 miles",
+            "body" : "31418 N Lincoln Ave"},
             ],
         "links": {
             "Button1": {"text": "Print",
