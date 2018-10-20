@@ -45,21 +45,21 @@ def page_2(request):
         "text" : "Menu",
         "links" : {
             "Button1" : {"text" : "Print", 
-                "link" : reciept_url},
+                "link" : "reciept_url"},
             "Button2" : {"text" : "", 
                 "link" : "#"},
             "Button3" : {"text" : "", 
                 "link" : "#"},
             "Button4" : {"text" : "", 
                 "link" : "#"},
-            "Button5" : {"text" : "", 
-<<<<<<< HEAD
+            "Button5" : {"text" : "",
                 "link" : "#"} ,   
             "Button6" : {"text" : "Next", 
                 "link" : "page_3"},
         }
     }
     return render(request, 'maxkiosk/index.html')
+
 
 def page_3(request):
     context = {
@@ -70,7 +70,7 @@ def page_3(request):
             "Button2" : {"text" : "Basic", 
                 "link" : "page_4b"},
             "Button3" : {"text" : "Print", 
-                "link" : reciept_url},
+                "link" : "reciept_url"},
             "Button4" : {"text" : "Food", 
                 "link" : "page_4c"},
             "Button5" : {"text" : "Health", 
@@ -80,15 +80,7 @@ def page_3(request):
         }
     }
     return render(request, 'maxkiosk/index.html')
-=======
-                "link" : "page_2"} ,   
-            "Button6" : {"text" : "", 
-                "link" : "page_2"},}}
-    return render(request, 'maxkiosk/index.html', context=context)
 
-def page_3(request):
-    return render(request, 'maxkiosk/index.html', context=context)
->>>>>>> 32b401e8dff1b82ded1585a2fb170abec807a8b6
 
 def page_4a(request):
     context = {
@@ -109,6 +101,7 @@ def page_4a(request):
         }
     }
     return render(request, 'maxkiosk/page_4a.html', context=context)
+
 
 def page_4b(request):
     context = {
