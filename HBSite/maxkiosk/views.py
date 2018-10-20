@@ -42,7 +42,7 @@ def page_1(request):
 
 def page_2(request):
     context = {
-        "text" : "Menu",
+        "text" : "Alerts",
         "links" : {
             "Button1" : {"text" : "Print", 
                 "link" : reciept_url},
@@ -148,7 +148,7 @@ def page_4d(request):
         "text": "Options",
         "links": {
             "Button1": {"text": "Print",
-                        "link": "#"},
+                        "link": reciept_url},
             "Button2": {"text": "",
                         "link": "#"},
             "Button3": {"text": "",
