@@ -7,7 +7,6 @@ urlpatterns = [
     path('page_1', views.page_1, name='page_1'),
     path('page_2', views.page_2, name='page_2'),
     path('page_3', views.page_3, name='page_3'),
-    path('page_4', views.page_4, name='page_4'),
     path('page_4a', views.page_4a, name='page_4a'),
     path('page_4b', views.page_4b, name='page_4b'),
     path('page_4c', views.page_4c, name='page_4c'),
