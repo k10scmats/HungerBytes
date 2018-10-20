@@ -1,0 +1,48 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<body>
+
+<map name="maxmap">
+    <area shape="rect" coords="219, 912, 322, 1056" href="main.html">
+</map>
+
+<img id="scream" src="{% static 'maxkiosk/Main_Background.jpg' %}" usemap="#maxmap" style="position:absolute; z-index: -1">
+
+<canvas id="myCanvas" width="1116" height="751" style="position: absolute;" usemap="#maxmap">
+Your browser does not support the HTML5 canvas tag.
+</canvas>
+
+<script>
+window.onload = function() {
+    var canvas = document.getElementById("myCanvas");
+    var ctx = canvas.getContext("2d");
+    ctx.fillStyle = "#FFFFFF";
+    ctx.fillRect(225,186,867,643);
+    ctx.fillStyle = "#000000";
+    ctx.font = "30px Ariel";
+    ctx.fillText("Hello, World!", 300, 250);
+
+    var start_x = 235;
+    var y = 601;
+    var button_height = 155;
+    var total_width = 840;
+    var pair_corner =  total_width / 5.69
+    var button_width = total_width / 6.37
+    for (var i=0; i < 6; i++) {
+        ctx.fillStyle = (i % 2 == 0 ) ? "#122C3D" : "#B9B987";
+        ctx.fillRect(start_x + (i * pair_corner), y, button_width, button_height);
+        ctx.fillStyle = (i % 2 == 1 ) ? "#122C3D" : "#B9B987";
+        ctx.beginPath()
+        ctx.moveTo(start_x +i*pair_corner + button_width/2, y + button_height - button_height/19.37)
+        ctx.lineTo(start_x +i*pair_corner + button_width/2 + total_width/22.63, y + button_height - button_height/3.369)
+        ctx.lineTo(start_x +i*pair_corner + button_width/2 - total_width/22.63, y + button_height - button_height/3.369)
+        ctx.closePath()
+        ctx.fill()
+    }
+
+};
+</script>
+
+</body>
+</html>
