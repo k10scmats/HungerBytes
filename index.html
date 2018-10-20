@@ -17,12 +17,31 @@ Your browser does not support the HTML5 canvas tag.
 window.onload = function() {
     var canvas = document.getElementById("myCanvas");
     var ctx = canvas.getContext("2d");
-    var img = document.getElementById("scream");
-    ctx.fillStyle = "#FFFFFF"
-    ctx.fillRect(225,110,867,643)
-    ctx.fillStyle = "#000000"
-    ctx.font = "30px Ariel"
-    ctx.fillText("Hello, World!", 300, 200)
+    ctx.fillStyle = "#FFFFFF";
+    ctx.fillRect(225,110,867,643);
+    ctx.fillStyle = "#000000";
+    ctx.font = "30px Ariel";
+    ctx.fillText("Hello, World!", 300, 200);
+
+    var start_x = 235;
+    var y = 601;
+    var button_height = 155;
+    var total_width = 860;
+    var pair_corner =  total_width / 5.69
+    var button_width = total_width / 6.37
+    var gap_width = total_width / 57.33
+    for (var i=0; i < 6; i++) {
+        ctx.fillStyle = (i % 2 == 0 ) ? "#122C3D" : "#B9B987";
+        ctx.fillRect(start_x + (i * pair_corner), y, button_width, button_height);
+        ctx.fillStyle = (i % 2 == 1 ) ? "#122C3D" : "#B9B987";
+        ctx.beginPath()
+        ctx.moveTo(start_x +i*pair_corner + button_width/2, y + button_height - button_height/19.37)
+        ctx.lineTo(start_x +i*pair_corner + button_width/2 + total_width/22.63, y + button_height - button_height/3.369)
+        ctx.lineTo(start_x +i*pair_corner + button_width/2 - total_width/22.63, y + button_height - button_height/3.369)
+        ctx.closePath()
+        ctx.fill()
+    }
+
 };
 </script>
 
