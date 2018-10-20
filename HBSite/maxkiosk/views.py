@@ -95,8 +95,12 @@ def page_3(request):
 
 def page_4a(request):
     context = {
-        "text" : "Options...",
-        "body" : "Welcome!",
+        "content" : [
+            {"heading" : "St. Francis Dining Hall 8AM - 5PM - 2 miles",
+            "body" : "330 SE 11th Ave"},
+            {"heading" : "Portland Rescue Mission – 1 mile",
+            "body" : "111 W Burnside Street"},
+            ],
         "links" : {
             "Button1" : {"text" : "Print",
                 "link" : reciept_url},
@@ -118,10 +122,10 @@ def page_4a(request):
 def page_4b(request):
     context = {
         "content" : [
-            {"heading" : "Options...",
-            "body" : "Welcome!"},
-            {"heading" : "Options...",
-            "body" : "Welcome!"},
+            {"heading" : "Showers: Portland Rescue Mission - 1 mile",
+            "body" : "111 W Burnside Street"},
+            {"heading" : "Clothing: Saint Andre Bassette Catholic Church - 1 miles",
+            "body" : "601 W Burnside Street"},
             ],
         "links" : {
             "Button1" : {"text" : "Print",
@@ -142,8 +146,12 @@ def page_4b(request):
 
 def page_4c(request):
     context_4c = {
-        "text": "Options",
-        "body" : "Welcome!",
+        "content" : [
+            {"heading" : "Soup Kitchen: Operation Nightwatch - 0.5 mile",
+            "body" : "1432 SW 13th Ave"},
+            {"heading" : "Sack Lunches & Dinners: Union Gospel Mission",
+            "body" : "1432 SW 13th Ave"},
+            ],
         "links" : {
             "Button1" : {"text" : "Print",
                 "link" : reciept_url},
