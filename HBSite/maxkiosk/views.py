@@ -109,8 +109,12 @@ def page_4a(request):
 
 def page_4b(request):
     context = {
-        "text" : "Options...",
-        "body" : "Welcome!",
+        "content" : [
+            {"heading" : "Options...",
+            "body" : "Welcome!"},
+            {"heading" : "Options...",
+            "body" : "Welcome!"},
+            ],
         "links" : {
             "Button1" : {"text" : "Print",
                 "link" : reciept_url},

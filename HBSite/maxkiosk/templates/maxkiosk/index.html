@@ -31,10 +31,14 @@ window.onload = function() {
     ctx.fillStyle = "#FFFFFF";
     ctx.fillRect(225,186,867,643);
     ctx.fillStyle = "#000000";
-    ctx.font = "30px Ariel";
-    ctx.fillText("{{ text }} ", 300, 250);
-    <!--ctx.fillText("Test", 300, 610)-->
 
+    ctx.font = "30px Ariel";
+    ctx.textAlign="center";
+    ctx.fillText("{{ text }} ", 300, 250);
+
+    ctx.font = "30px Ariel";
+    ctx.textAlign="center";
+    ctx.fillText("{{ body }} ", 300, 400);
 
     var start_x = 235;
     var y = 601;
@@ -55,6 +59,7 @@ window.onload = function() {
         ctx.closePath()
         ctx.fill()
     }
+    ctx.textAlign="left";
     ctx.fillStyle = "#FFFFFF";
     ctx.fillText("{{links.Button1.text}}", 250, 650)
 
