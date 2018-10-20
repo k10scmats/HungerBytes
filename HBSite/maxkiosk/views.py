@@ -3,7 +3,7 @@ from django.http import HttpResponse
 from .models import User
 from django.contrib.staticfiles.templatetags.staticfiles import static
 
-reciept_url = static('image.png')
+reciept_url = static('maxkiosk/image.png')
 # Create your views here.
 
 def get_button_list(box=(860, 420, 1130, 640), n_buttons = 6, bgr=0.8, height=60, link_list=["page.html"]):
