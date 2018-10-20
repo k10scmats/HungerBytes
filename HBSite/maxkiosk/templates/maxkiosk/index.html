@@ -4,7 +4,10 @@
 <body>
 
 <map name="maxmap">
-    <area shape="rect" coords="219, 912, 322, 1056" href="main.html">
+    {% for link, button_shape in button_list %}
+    <area shape="rect" coords="{{ button_shape }}" href="{{link}}">
+    {% endfor %}
+
 </map>
 
 <img id="scream" src="{% static 'maxkiosk/Main_Background.jpg' %}" usemap="#maxmap" style="position:absolute; z-index: -1">
@@ -21,7 +24,7 @@ window.onload = function() {
     ctx.fillRect(225,186,867,643);
     ctx.fillStyle = "#000000";
     ctx.font = "30px Ariel";
-    ctx.fillText("Hello, World!", 300, 250);
+    ctx.fillText("Hello, {{ name }}", 300, 250);
 
     var start_x = 235;
     var y = 601;
