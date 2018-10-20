@@ -53,6 +53,7 @@ def page_2(request):
             "Button4" : {"text" : "", 
                 "link" : "#"},
             "Button5" : {"text" : "", 
+<<<<<<< HEAD
                 "link" : "#"} ,   
             "Button6" : {"text" : "Next", 
                 "link" : "page_3"},
@@ -79,13 +80,22 @@ def page_3(request):
         }
     }
     return render(request, 'maxkiosk/index.html')
+=======
+                "link" : "page_2"} ,   
+            "Button6" : {"text" : "", 
+                "link" : "page_2"},}}
+    return render(request, 'maxkiosk/index.html', context=context)
+
+def page_3(request):
+    return render(request, 'maxkiosk/index.html', context=context)
+>>>>>>> 32b401e8dff1b82ded1585a2fb170abec807a8b6
 
 def page_4a(request):
     context = {
         "text" : "Options...",
         "links" : {
             "Button1" : {"text" : "Print",
-                "link" : "#"},
+                "link" : "receipt_url"},
             "Button2" : {"text" : "",
                 "link" : "#"},
             "Button3" : {"text" : "",
@@ -98,14 +108,14 @@ def page_4a(request):
                 "link" : "page_3"}
         }
     }
-    return render(request, 'maxkiosk/page_4a.html')
+    return render(request, 'maxkiosk/page_4a.html', context=context)
 
 def page_4b(request):
     context = {
         "text" : "Options...",
         "links" : {
             "Button1" : {"text" : "Print",
-                "link" : "#"},
+                "link" : "receipt_url"},
             "Button2" : {"text" : "",
                 "link" : "#"},
             "Button3" : {"text" : "",
@@ -118,7 +128,7 @@ def page_4b(request):
                 "link" : "page_3"}
         }
     }
-    return render(request, 'maxkiosk/page_4b.html')
+    return render(request, 'maxkiosk/page_4b.html', context=context)
 
 def page_4c(request):
     context_4c = {
@@ -155,7 +165,7 @@ def page_4d(request):
             "Button5": {"text": "",
                         "link": "#"},
             "Button6": {"text": "Back",
-                        "link": "page_3"}
+                        "link": "page_4d"}
         }
     }
     return render(request, 'maxkiosk/index.html', context=context_4d)
