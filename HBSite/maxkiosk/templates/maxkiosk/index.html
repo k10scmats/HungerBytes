@@ -4,6 +4,13 @@
 <body>
 
 <map name="maxmap">
+    <area shape="rect" coords="227,919,320,1054" href="Page1">
+	<area shape="rect" coords="385,919,477,1054" href="Page2">
+	<area shape="rect" coords="543,919,635,1054" href="Page3">
+	<area shape="rect" coords="700,919,791,1054" href="Page4">
+	<area shape="rect" coords="856,919,946,1054" href="Page5">
+	<area shape="rect" coords="1012,919,1105,1054" href="Page6">
+	
     {% for link, button_shape in button_list %}
     <area shape="rect" coords="{{ button_shape }}" href="#">
     {% endfor %}

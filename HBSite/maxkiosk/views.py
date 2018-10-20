@@ -5,7 +5,7 @@ from .models import User
 # Create your views here.
 
 def get_button_list(box=(860, 420, 1130, 640), n_buttons = 6, bgr=0.8, height=60, link_list=["page.html"]):
-    coord_list = [[0,0,0,0]]
+    coord_list = [[219, 912, 322, 1056]]
     return zip(link_list, coord_list)
 
 def index(request):
