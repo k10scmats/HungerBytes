@@ -19,7 +19,16 @@ def index(request):
     return render(request, 'maxkiosk/index.html', context=context)
 
 def page_1(request):
-    return render(request, 'maxkiosk/page_1.html')
+    context = {
+        "text" : "Menu",
+        "links" : {
+            "Button1" : {"text" : "Health and services", 
+                "link" : "page_4a"},
+            "Button2" : {"text" : "Health and services", 
+                "link" : "page_4a"}
+        }
+    }
+    return render(request, 'maxkiosk/index.html', context=context)
 
 def page_2(request):
     return render(request, 'maxkiosk/page_2.html')
