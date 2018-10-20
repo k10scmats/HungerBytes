@@ -23,6 +23,7 @@ def index(request):
 def page_1(request):
     context = {
         "text" : "Menu",
+        "body" : "Welcome!",
         "links" : {
             "Button1" : {"text" : "", 
                 "link" : "page_2"},
@@ -38,11 +39,12 @@ def page_1(request):
                 "link" : "page_2"},
         }
     }
-    return render(request, 'maxkiosk/index.html', context=context)
+    return render(request, 'maxkiosk/home.html', context=context)
 
 def page_2(request):
     context = {
         "text" : "Menu",
+        "body" : "Welcome!",
         "links" : {
             "Button1" : {"text" : "Print", 
                 "link" : reciept_url},
@@ -64,6 +66,7 @@ def page_2(request):
 def page_3(request):
     context = {
         "text" : "Menu",
+        "body" : "Welcome!",
         "links" : {
             "Button1" : {"text" : "H and S",
                 "link" : "page_4a"},
@@ -85,6 +88,7 @@ def page_3(request):
 def page_4a(request):
     context = {
         "text" : "Options...",
+        "body" : "Welcome!",
         "links" : {
             "Button1" : {"text" : "Print",
                 "link" : reciept_url},
@@ -106,6 +110,7 @@ def page_4a(request):
 def page_4b(request):
     context = {
         "text" : "Options...",
+        "body" : "Welcome!",
         "links" : {
             "Button1" : {"text" : "Print",
                 "link" : reciept_url},
@@ -126,6 +131,7 @@ def page_4b(request):
 def page_4c(request):
     context_4c = {
         "text": "Options",
+        "body" : "Welcome!",
         "links" : {
             "Button1" : {"text" : "Print",
                 "link" : "#"},
@@ -146,6 +152,7 @@ def page_4c(request):
 def page_4d(request):
     context_4d = {
         "text": "Options",
+        "body" : "Welcome!",
         "links": {
             "Button1": {"text": "Print",
                         "link": "#"},
@@ -166,6 +173,7 @@ def page_4d(request):
 def page_4e(request):
     context_4e = {
         "text": "Transit",
+        "body" : "Welcome!",
         "links": {
             "Button1": {"text": "Print",
                         "link": reciept_url},
