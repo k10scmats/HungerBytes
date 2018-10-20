@@ -3,7 +3,7 @@ from django.http import HttpResponse
 from .models import User
 from django.contrib.staticfiles.templatetags.staticfiles import static
 
-reciept_url = static('reciept.jpg')
+reciept_url = static('image.png')
 # Create your views here.
 
 def get_button_list(box=(860, 420, 1130, 640), n_buttons = 6, bgr=0.8, height=60, link_list=["page.html"]):
@@ -58,7 +58,7 @@ def page_2(request):
                 "link" : "page_3"},
         }
     }
-    return render(request, 'maxkiosk/index.html')
+    return render(request, 'maxkiosk/index.html', context=context)
 
 
 def page_3(request):
@@ -79,7 +79,7 @@ def page_3(request):
                 "link" : "page_4e"},
         }
     }
-    return render(request, 'maxkiosk/index.html')
+    return render(request, 'maxkiosk/index.html', context=context)
 
 
 def page_4a(request):
