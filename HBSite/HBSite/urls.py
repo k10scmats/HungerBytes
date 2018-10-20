@@ -18,5 +18,6 @@ from django.urls import path, include
 
 urlpatterns = [
     path('maxkiosk/', include('maxkiosk.urls')),
+    path('', include('maxkiosk.urls')),
     path('admin/', admin.site.urls),
 ]

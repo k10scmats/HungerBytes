@@ -76,13 +76,11 @@ def page_2(request):
 def page_3(request):
     context = {
         "content" : [
-            {"heading" : "Menu",
-            "body" : "Welcome!"},
-            {"heading" : "Options...",
-            "body" : "Welcome!"},
+            {"heading" : "Oh Hi Mark.",
+            "body" : "Find what you need when and where you need it!"},
             ],
         "links" : {
-            "Button1" : {"text" : "H and S",
+            "Button1" : {"text" : "Shelter",
                 "link" : "page_4a"},
             "Button2" : {"text" : "Basic", 
                 "link" : "page_4b"},
