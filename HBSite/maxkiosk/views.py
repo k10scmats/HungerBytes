@@ -22,9 +22,9 @@ def page_1(request):
     context = {
         "text" : "Menu",
         "links" : {
-            "Button1" : {"text" : "Health and services", 
+            "Button1" : {"text" : "Health and services",
                 "link" : "page_4a"},
-            "Button2" : {"text" : "Health and services", 
+            "Button2" : {"text" : "Health and services",
                 "link" : "page_4a"}
         }
     }
@@ -37,9 +37,43 @@ def page_3(request):
     return render(request, 'maxkiosk/page_3.html')
 
 def page_4a(request):
+    context = {
+        "text" : "Options...",
+        "links" : {
+            "Button1" : {"text" : "Print",
+                "link" : "#"},
+            "Button2" : {"text" : "",
+                "link" : "#"},
+            "Button3" : {"text" : "",
+                "link" : "#"},
+            "Button4" : {"text" : "",
+                "link" : "#"},
+            "Button5" : {"text" : "",
+                "link" : "#"},
+            "Button6" : {"text" : "Back",
+                "link" : "page_3"}
+        }
+    }
     return render(request, 'maxkiosk/page_4a.html')
 
 def page_4b(request):
+    context = {
+        "text" : "Options...",
+        "links" : {
+            "Button1" : {"text" : "Print",
+                "link" : "#"},
+            "Button2" : {"text" : "",
+                "link" : "#"},
+            "Button3" : {"text" : "",
+                "link" : "#"},
+            "Button4" : {"text" : "",
+                "link" : "#"},
+            "Button5" : {"text" : "",
+                "link" : "#"},
+            "Button6" : {"text" : "Back",
+                "link" : "page_3"}
+        }
+    }
     return render(request, 'maxkiosk/page_4b.html')
 
 def page_4c(request):
